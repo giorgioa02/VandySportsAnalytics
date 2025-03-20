@@ -7,7 +7,7 @@ import Football from './pages/Football';
 import Basketball from './pages/Basketball';
 import Baseball from './pages/Baseball';
 import Soccer from './pages/Soccer';
-
+import GameData from './components/GameData';
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
@@ -40,6 +40,7 @@ const App = () => {
                   <Link to="/baseball" className="text-gray-800 hover:underline">Baseball</Link>
                 </li>
               </ul>
+
 
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Women's Sports</h3>
               <ul>
@@ -77,6 +78,10 @@ const App = () => {
               <Route path="/baseball" element={<Baseball />} />
               <Route path="/soccer" element={<Soccer />} />
             </Routes>
+	    <div>
+            <h1>Vandy Sports Analytics</h1>
+            <GameData />
+            </div>
           </main>
         </div>
       </div>
