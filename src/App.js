@@ -8,7 +8,6 @@ import Basketball from './pages/Basketball';
 import Baseball from './pages/Baseball';
 import Soccer from './pages/Soccer';
 
-
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
@@ -28,22 +27,31 @@ const App = () => {
             ☰
           </button>
           <nav className={`p-4 ${isSidebarOpen ? 'block' : 'hidden'}`}>
-            <ul>
-              <li className="mb-4">
-                <Link to="/football" className="text-gray-800 hover:underline">Football</Link>
-              </li>
-              <li className="mb-4">
-                <Link to="/basketball" className="text-gray-800 hover:underline">Basketball</Link>
-              </li>
-              <li className="mb-4">
-                <Link to="/baseball" className="text-gray-800 hover:underline">Baseball</Link>
-              </li>
-              <li className="mb-4">
-                <Link to="/soccer" className="text-gray-800 hover:underline">Soccer</Link>
-              </li>
-            </ul>
-          </nav>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Men's Sports</h3>
+              <ul className="mb-4">
+                <li className="mb-2">
+                  <Link to="/football" className="text-gray-800 hover:underline">Football</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to="/basketball" className="text-gray-800 hover:underline">Basketball</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to="/baseball" className="text-gray-800 hover:underline">Baseball</Link>
+                </li>
+              </ul>
 
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Women's Sports</h3>
+              <ul>
+                <li className="mb-2">
+                  <Link to="/soccer" className="text-gray-800 hover:underline">Soccer</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to="/basketball" className="text-gray-800 hover:underline">Basketball</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
 
         {/* Main Content */}
@@ -77,4 +85,3 @@ const App = () => {
 };
 
 export default App;
-
