@@ -1,5 +1,5 @@
 # Vanderbilt Sports Analytics Dashboard – Backend Setup
-This project fetches, transforms, and stores data for Vanderbilt Men's Basketball using the SportRadar API. It supports multiple seasons (years) and season types (REG, CT, PST).
+This project fetches, transforms, and stores data for Vanderbilt Men's Basketball using the SportRadar API. See: https://developer.sportradar.com/basketball/reference/ncaamb-overview. It supports multiple seasons (years) and season types (REG, CT, PST).
 
 ## What's Done
 - Team Profile:
