@@ -4,9 +4,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Football from './pages/Football';
-import Basketball from './pages/Basketball';
 import Baseball from './pages/Baseball';
 import Soccer from './pages/Soccer';
+// Import the dashboard component for men's basketball
+import MensBasketballDashboard from './components/MensBasketballDashboard';
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -34,7 +35,8 @@ const App = () => {
                   <Link to="/football" className="text-gray-800 hover:underline">Football</Link>
                 </li>
                 <li className="mb-2">
-                  <Link to="/basketball" className="text-gray-800 hover:underline">Basketball</Link>
+                  {/* Update this link to point to the dedicated mens basketball route */}
+                  <Link to="/mens-basketball" className="text-gray-800 hover:underline">Basketball</Link>
                 </li>
                 <li className="mb-2">
                   <Link to="/baseball" className="text-gray-800 hover:underline">Baseball</Link>
@@ -47,7 +49,8 @@ const App = () => {
                   <Link to="/soccer" className="text-gray-800 hover:underline">Soccer</Link>
                 </li>
                 <li className="mb-2">
-                  <Link to="/basketball" className="text-gray-800 hover:underline">Basketball</Link>
+                  {/* You can later add a separate route for women's basketball */}
+                  <Link to="/womens-basketball" className="text-gray-800 hover:underline">Basketball</Link>
                 </li>
               </ul>
             </div>
@@ -73,9 +76,11 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/football" element={<Football />} />
-              <Route path="/basketball" element={<Basketball />} />
+              {/* New route for men's basketball */}
+              <Route path="/mens-basketball" element={<MensBasketballDashboard />} />
               <Route path="/baseball" element={<Baseball />} />
               <Route path="/soccer" element={<Soccer />} />
+              {/* You can add a women's basketball route later */}
             </Routes>
           </main>
         </div>

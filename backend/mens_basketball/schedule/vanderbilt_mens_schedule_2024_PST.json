@@ -1,0 +1,45 @@
+{
+  "league": {
+    "id": "cd4268ee-07aa-4c4d-a435-ec44ad2c76cb",
+    "name": "NCAA MEN",
+    "alias": "NCAAM"
+  },
+  "season": {
+    "id": "b2e4c0e0-5571-47c3-ab8b-1db65d74234e",
+    "year": 2024,
+    "type": "PST"
+  },
+  "games": [
+    {
+      "id": "8ecec46a-9c15-4bf6-9596-dc4002ad46ba",
+      "coverage": "full",
+      "scheduled": "2025-03-21T19:34:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "b18f34af-a7f1-4659-a2e5-fc11a31cd316",
+        "name": "Saint Mary's Gaels",
+        "alias": "SMC",
+        "points": 59
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 56
+      },
+      "venue": {
+        "id": "42cddf7a-0e1f-5f91-ae6f-c620582fdb01",
+        "name": "Rocket Arena",
+        "city": "Cleveland",
+        "state": "OH",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "truTV",
+          "type": "TV"
+        }
+      ]
+    }
+  ]
+}

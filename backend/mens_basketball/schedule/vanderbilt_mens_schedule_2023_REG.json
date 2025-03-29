@@ -1,0 +1,983 @@
+{
+  "league": {
+    "id": "cd4268ee-07aa-4c4d-a435-ec44ad2c76cb",
+    "name": "NCAA MEN",
+    "alias": "NCAAM"
+  },
+  "season": {
+    "id": "05b9e2ec-8916-432f-8a56-6579eb825dd0",
+    "year": 2023,
+    "type": "REG"
+  },
+  "games": [
+    {
+      "id": "f0dbfd7b-1bb3-4fb0-be5a-911c32a8e549",
+      "coverage": "full",
+      "scheduled": "2023-11-08T01:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 62
+      },
+      "away_team": {
+        "id": "b06b63b0-20e6-4c78-bdcf-5feac3d7995e",
+        "name": "Presbyterian Blue Hose",
+        "alias": "PRE",
+        "points": 68
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network+",
+          "type": "Internet"
+        }
+      ]
+    },
+    {
+      "id": "28b84c68-d126-4e1d-ae64-959e41e48c16",
+      "coverage": "full",
+      "scheduled": "2023-11-11T00:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 74
+      },
+      "away_team": {
+        "id": "2e78bd1b-9422-491e-9c73-37cf83b0e34e",
+        "name": "USC Upstate Spartans",
+        "alias": "SCUS",
+        "points": 67
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network+",
+          "type": "Internet"
+        },
+        {
+          "network": "ESPN+",
+          "type": "Internet"
+        }
+      ]
+    },
+    {
+      "id": "0fc26d01-84bf-44a7-ab99-1eabebc96a5c",
+      "coverage": "full",
+      "scheduled": "2023-11-15T01:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 74
+      },
+      "away_team": {
+        "id": "612f7f66-1de1-4d42-b842-9a508daab911",
+        "name": "UNC Greensboro Spartans",
+        "alias": "UNCG",
+        "points": 70
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network+",
+          "type": "Internet"
+        }
+      ]
+    },
+    {
+      "id": "3b6397a8-0461-43eb-8a78-ee051dda0886",
+      "coverage": "full",
+      "scheduled": "2023-11-18T00:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 75
+      },
+      "away_team": {
+        "id": "dfc2dfb7-aa67-4c48-99c9-4fa6c6bc4355",
+        "name": "Central Arkansas Bears",
+        "alias": "CARK",
+        "points": 71
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network+",
+          "type": "Internet"
+        },
+        {
+          "network": "ESPN+",
+          "type": "Internet"
+        }
+      ]
+    },
+    {
+      "id": "5a0dc16f-18bd-4141-a4de-9586c665a93c",
+      "coverage": "full",
+      "scheduled": "2023-11-24T03:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 78
+      },
+      "away_team": {
+        "id": "52df1e19-b142-4a76-a439-ad68455d0581",
+        "name": "North Carolina State Wolfpack",
+        "alias": "NCST",
+        "points": 84
+      },
+      "venue": {
+        "id": "06c2f947-3e69-43b8-bfec-d01c2370a21f",
+        "name": "Michelob ULTRA Arena",
+        "city": "Paradise",
+        "state": "NV",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "ESPN2",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "d2f40938-a82e-400a-97dc-4069393c0f4d",
+      "coverage": "full",
+      "scheduled": "2023-11-25T01:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "ad4bc983-8d2e-4e6f-a8f9-80840a786c64",
+        "name": "Arizona State Sun Devils",
+        "alias": "ASU",
+        "points": 82
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 67
+      },
+      "venue": {
+        "id": "06c2f947-3e69-43b8-bfec-d01c2370a21f",
+        "name": "Michelob ULTRA Arena",
+        "city": "Paradise",
+        "state": "NV",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "ESPN2",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "628ac9dc-83f5-4134-9d07-cedfbb74da2d",
+      "coverage": "full",
+      "scheduled": "2023-11-30T02:15:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 62
+      },
+      "away_team": {
+        "id": "4b3ff02c-e0ba-435b-a565-6075bc491684",
+        "name": "Boston College Eagles",
+        "alias": "BC",
+        "points": 80
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "041267d0-deba-416a-b26a-87b5dc72760e",
+      "coverage": "full",
+      "scheduled": "2023-12-02T22:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 78
+      },
+      "away_team": {
+        "id": "949c3398-85e4-4c63-ba71-9a82e06ddea4",
+        "name": "Alabama A&M Bulldogs",
+        "alias": "AAMU",
+        "points": 59
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network+",
+          "type": "Internet"
+        }
+      ]
+    },
+    {
+      "id": "b317bbd0-568a-40af-8288-89349496cb0f",
+      "coverage": "full",
+      "scheduled": "2023-12-07T01:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 60
+      },
+      "away_team": {
+        "id": "d24efd99-8717-43b9-a086-9986a684ac04",
+        "name": "San Francisco Dons",
+        "alias": "SF",
+        "points": 73
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network+",
+          "type": "Internet"
+        }
+      ]
+    },
+    {
+      "id": "04572db3-e1f3-43e3-ab56-d072ed13b8e6",
+      "coverage": "full",
+      "scheduled": "2023-12-17T00:30:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "f8c705b7-87d3-411a-9c8b-5124daab0469",
+        "name": "Texas Tech Red Raiders",
+        "alias": "TTU",
+        "points": 76
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 54
+      },
+      "venue": {
+        "id": "c9edf816-17ce-46f6-84f2-0ced94fa9b47",
+        "name": "Dickies Arena",
+        "city": "Fort Worth",
+        "state": "TX",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "ESPN+",
+          "type": "Internet"
+        }
+      ]
+    },
+    {
+      "id": "c18d6b31-411f-48f4-8ac7-7f78855326c4",
+      "coverage": "full",
+      "scheduled": "2023-12-20T00:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 62
+      },
+      "away_team": {
+        "id": "6bff595c-32cb-4028-837c-c7de2a2107e6",
+        "name": "Western Carolina Catamounts",
+        "alias": "WCU",
+        "points": 63
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "9b0ece6f-c0cd-4906-9af3-4f2c5b761a1f",
+      "coverage": "full",
+      "scheduled": "2023-12-23T21:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "1551b3a0-6d10-4ffa-8dfa-73b56f004553",
+        "name": "Memphis Tigers",
+        "alias": "MEM",
+        "points": 77
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 75
+      },
+      "venue": {
+        "id": "7657c204-a20b-527a-99cb-dc29218462aa",
+        "name": "FedExForum",
+        "city": "Memphis",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "CBS",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "f0dfd8fa-2952-4945-963d-7c6579e66479",
+      "coverage": "full",
+      "scheduled": "2023-12-30T22:00:00Z",
+      "conference_game": false,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 69
+      },
+      "away_team": {
+        "id": "d60357bd-1205-42e9-9092-d986a2843a34",
+        "name": "Dartmouth Big Green",
+        "alias": "DART",
+        "points": 53
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network+",
+          "type": "Internet"
+        }
+      ]
+    },
+    {
+      "id": "a1361f54-4b0f-4c9e-89a3-dd09723daea8",
+      "coverage": "full",
+      "scheduled": "2024-01-06T20:30:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 75
+      },
+      "away_team": {
+        "id": "c2104cdc-c83d-40d2-a3cd-df986e29f5d3",
+        "name": "Alabama Crimson Tide",
+        "alias": "ALA",
+        "points": 78
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "7858152d-4f29-4021-8cb5-f7a331466091",
+      "coverage": "full",
+      "scheduled": "2024-01-10T02:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "70e2bedd-3a0a-479c-ac99-e3f58aa6824b",
+        "name": "LSU Tigers",
+        "alias": "LSU",
+        "points": 77
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 69
+      },
+      "venue": {
+        "id": "615abad7-6aab-4960-bbfa-7b305bcac30f",
+        "name": "Pete Maravich Assembly Center",
+        "city": "Baton Rouge",
+        "state": "LA",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "f9961329-a1eb-410b-a1fb-b0c51dd1a66b",
+      "coverage": "full",
+      "scheduled": "2024-01-13T18:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "d7d668ec-edaa-4d6b-be25-2ebba4128643",
+        "name": "Ole Miss Rebels",
+        "alias": "MISS",
+        "points": 69
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 56
+      },
+      "venue": {
+        "id": "90777d6e-cc3b-4fdd-8801-f20e07bf8a60",
+        "name": "The Sandy and John Black Pavilion at Ole Miss",
+        "city": "Oxford",
+        "state": "MS",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "ba1cd4bc-74ef-464f-8b4e-4fa3d7d3b2aa",
+      "coverage": "full",
+      "scheduled": "2024-01-18T02:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 65
+      },
+      "away_team": {
+        "id": "0c0608b3-f349-4f5e-9a10-7e6a744dd0d2",
+        "name": "Auburn Tigers",
+        "alias": "AUB",
+        "points": 80
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "2ddd36f1-18f3-4470-b87f-a7bee8d141d9",
+      "coverage": "full",
+      "scheduled": "2024-01-20T20:30:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "a1ba4b89-d97c-44e2-835f-79ad3ccaa5ae",
+        "name": "Mississippi State Bulldogs",
+        "alias": "MSST",
+        "points": 68
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 55
+      },
+      "venue": {
+        "id": "8949bf74-cf16-4c7c-8e8a-bc92b6f85d23",
+        "name": "Humphrey Coliseum",
+        "city": "Starkville",
+        "state": "MS",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "91d791f6-299d-44a8-bf92-1c56a679722a",
+      "coverage": "full",
+      "scheduled": "2024-01-27T23:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 62
+      },
+      "away_team": {
+        "id": "b827dbdf-230f-4916-9703-3bb9004e26eb",
+        "name": "Tennessee Volunteers",
+        "alias": "TENN",
+        "points": 75
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "4d909309-fe78-4a22-acbb-4a942da5090b",
+      "coverage": "full",
+      "scheduled": "2024-02-01T02:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "0c0608b3-f349-4f5e-9a10-7e6a744dd0d2",
+        "name": "Auburn Tigers",
+        "alias": "AUB",
+        "points": 81
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 54
+      },
+      "venue": {
+        "id": "0b181487-42ee-4324-9785-bf798c2b4c10",
+        "name": "Neville Arena",
+        "city": "Auburn",
+        "state": "AL",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "ESPN2",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "c0e153db-a33d-453e-893e-00f139114a9f",
+      "coverage": "full",
+      "scheduled": "2024-02-03T20:30:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 68
+      },
+      "away_team": {
+        "id": "77ca152a-cb2f-48a5-97b2-492351250d94",
+        "name": "Missouri Tigers",
+        "alias": "MIZZ",
+        "points": 61
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "9adbe9d3-645b-4233-8f6d-f077c5eccf06",
+      "coverage": "full",
+      "scheduled": "2024-02-07T01:30:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 77
+      },
+      "away_team": {
+        "id": "2267a1f4-68f6-418b-aaf6-2aa0c4b291f1",
+        "name": "Kentucky Wildcats",
+        "alias": "UK",
+        "points": 109
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "917b390f-c9dc-44ae-b238-a75c4de59221",
+      "coverage": "full",
+      "scheduled": "2024-02-10T18:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "1c7ec608-3b36-4cee-adac-9265e3792597",
+        "name": "South Carolina Gamecocks",
+        "alias": "SCAR",
+        "points": 75
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 60
+      },
+      "venue": {
+        "id": "874fedd5-4ab8-41fd-8b33-1ad9e93ed73a",
+        "name": "Colonial Life Arena",
+        "city": "Columbia",
+        "state": "SC",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "dcb9f870-922c-4545-9f3c-9d7d08a68f5e",
+      "coverage": "full",
+      "scheduled": "2024-02-14T00:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 74
+      },
+      "away_team": {
+        "id": "ef184799-d79b-49d9-a662-991eaf4044cd",
+        "name": "Texas A&M Aggies",
+        "alias": "TXAM",
+        "points": 73
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "ESPNU",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "790f2d12-0c26-490f-bd4f-8e28029d23eb",
+      "coverage": "full",
+      "scheduled": "2024-02-17T23:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "b827dbdf-230f-4916-9703-3bb9004e26eb",
+        "name": "Tennessee Volunteers",
+        "alias": "TENN",
+        "points": 88
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 53
+      },
+      "venue": {
+        "id": "33c07c5e-4ebe-4bec-a43d-78a679840ba7",
+        "name": "Thompson-Boling Arena",
+        "city": "Knoxville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "3c975ca0-b0bc-4e54-95c4-aa56804e2ec0",
+      "coverage": "full",
+      "scheduled": "2024-02-22T01:30:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 64
+      },
+      "away_team": {
+        "id": "4f4b0771-994c-4126-822d-7525aaa00f65",
+        "name": "Georgia Bulldogs",
+        "alias": "UGA",
+        "points": 76
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "7343f1c2-344b-4b6b-96b5-a93bb94a7998",
+      "coverage": "full",
+      "scheduled": "2024-02-24T18:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "912f8837-1d81-4ef9-a576-a21f271d4c64",
+        "name": "Florida Gators",
+        "alias": "FLA",
+        "points": 77
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 64
+      },
+      "venue": {
+        "id": "2a1b8d6e-c275-4f77-a5dd-5d0154667a5d",
+        "name": "Exactech Arena at the Stephen C. O'Connell Center",
+        "city": "Gainesville",
+        "state": "FL",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "9dc71ad8-d67a-4737-b132-a6d9eb7e3ff1",
+      "coverage": "full",
+      "scheduled": "2024-02-28T02:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "c70c23c4-ab09-4797-a1af-792c848ab17f",
+        "name": "Arkansas Razorbacks",
+        "alias": "ARK",
+        "points": 82
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 85
+      },
+      "venue": {
+        "id": "a5718f89-a8e8-4fca-8015-4fcd7eb2353a",
+        "name": "Bud Walton Arena",
+        "city": "Fayetteville",
+        "state": "AR",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "1a7eba17-9eb3-4394-8af4-beea92bc1139",
+      "coverage": "full",
+      "scheduled": "2024-03-02T20:30:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 61
+      },
+      "away_team": {
+        "id": "70e2bedd-3a0a-479c-ac99-e3f58aa6824b",
+        "name": "LSU Tigers",
+        "alias": "LSU",
+        "points": 75
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "8507e47c-ec2c-4a97-8dbb-acf89496097d",
+      "coverage": "full",
+      "scheduled": "2024-03-07T02:00:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "2267a1f4-68f6-418b-aaf6-2aa0c4b291f1",
+        "name": "Kentucky Wildcats",
+        "alias": "UK",
+        "points": 93
+      },
+      "away_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 77
+      },
+      "venue": {
+        "id": "fc615ca5-dff2-4477-b494-8acd27938c97",
+        "name": "Rupp Arena",
+        "city": "Lexington",
+        "state": "KY",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    },
+    {
+      "id": "0fa7f56e-6aaa-4b09-9f33-d105dad3ec55",
+      "coverage": "full",
+      "scheduled": "2024-03-09T21:30:00Z",
+      "conference_game": true,
+      "home_team": {
+        "id": "72971b77-1d35-40b3-bb63-4c5b29f3d22b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 79
+      },
+      "away_team": {
+        "id": "912f8837-1d81-4ef9-a576-a21f271d4c64",
+        "name": "Florida Gators",
+        "alias": "FLA",
+        "points": 78
+      },
+      "venue": {
+        "id": "c0cb7e8d-05c3-41db-9874-7a6436ca3800",
+        "name": "Memorial Gymnasium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "type": "TV"
+        }
+      ]
+    }
+  ]
+}
