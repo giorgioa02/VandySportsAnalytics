@@ -9,6 +9,9 @@ import Soccer from './pages/Soccer';
 // Import the dashboard component for men's basketball
 import MensBasketballDashboard from './components/MensBasketballDashboard';
 
+// Rohit edit: Import the dashboard component for men's football
+import MensFootballDashboard from './components/MensFootballDashboard';
+
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
@@ -32,7 +35,7 @@ const App = () => {
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Men's Sports</h3>
               <ul className="mb-4">
                 <li className="mb-2">
-                  <Link to="/football" className="text-gray-800 hover:underline">Football</Link>
+                  <Link to="/mens-football" className="text-gray-800 hover:underline">Football</Link>
                 </li>
                 <li className="mb-2">
                   {/* Update this link to point to the dedicated mens basketball route */}
@@ -75,7 +78,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/football" element={<Football />} />
+              <Route path="/mens-football" element={<MensFootballDashboard />} />
               {/* New route for men's basketball */}
               <Route path="/mens-basketball" element={<MensBasketballDashboard />} />
               <Route path="/baseball" element={<Baseball />} />

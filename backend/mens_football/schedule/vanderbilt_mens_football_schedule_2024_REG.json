@@ -1,0 +1,602 @@
+{
+  "id": "908fbc20-f5c7-11ee-a306-c311afc28263",
+  "year": 2024,
+  "type": "REG",
+  "games": [
+    {
+      "id": "1e1925fb-9d78-44ef-86b8-4f10234fa7f1",
+      "status": "closed",
+      "scheduled": "2024-08-31T16:00:00+00:00",
+      "attendance": 28934,
+      "duration": "3:40",
+      "conference_game": false,
+      "neutral_site": false,
+      "home_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 34
+      },
+      "away_team": {
+        "id": "5a9498fc-bae2-49d2-af1d-e13d07f4e68f",
+        "name": "Virginia Tech Hokies",
+        "alias": "VT",
+        "points": 27
+      },
+      "venue": {
+        "id": "2f49d92d-c734-4794-bcd5-f830138ae93d",
+        "name": "FirstBank Stadium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA",
+        "capacity": 40550,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "ESPN",
+          "satellite": "206"
+        }
+      ],
+      "weather": {
+        "condition": "Partly cloudy",
+        "temperature": 86,
+        "humidity": 59,
+        "wind": {
+          "speed": 4,
+          "direction": "NNW"
+        }
+      }
+    },
+    {
+      "id": "a5421115-ec03-45e4-a7a3-57ee181246c4",
+      "status": "closed",
+      "scheduled": "2024-09-07T23:30:00+00:00",
+      "attendance": 24080,
+      "duration": "3:08",
+      "conference_game": false,
+      "neutral_site": false,
+      "home_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 55
+      },
+      "away_team": {
+        "id": "0c59b9f5-6261-4aec-a491-d5a6a53f3e50",
+        "name": "Alcorn State Braves",
+        "alias": "ALCST",
+        "points": null
+      },
+      "venue": {
+        "id": "2f49d92d-c734-4794-bcd5-f830138ae93d",
+        "name": "FirstBank Stadium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA",
+        "capacity": 40550,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "ESPNU",
+          "satellite": "208"
+        }
+      ],
+      "weather": {
+        "condition": "Sunny",
+        "temperature": 74,
+        "humidity": 29,
+        "wind": {
+          "speed": 15,
+          "direction": "N"
+        }
+      }
+    },
+    {
+      "id": "4ee24724-a992-4bea-bd10-546a853b658b",
+      "status": "closed",
+      "scheduled": "2024-09-14T23:00:00+00:00",
+      "attendance": 14413,
+      "duration": "3:44",
+      "conference_game": false,
+      "neutral_site": false,
+      "home_team": {
+        "id": "4f776283-3758-4325-b633-31a5be257a80",
+        "name": "Georgia State Panthers",
+        "alias": "GST",
+        "points": 36
+      },
+      "away_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 32
+      },
+      "venue": {
+        "id": "fd518168-c4f1-4f3c-9be3-45adc4e32102",
+        "name": "Center Parc Stadium",
+        "city": "Atlanta",
+        "state": "GA",
+        "country": "USA",
+        "capacity": 24333,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "ESPN+"
+        }
+      ],
+      "weather": {
+        "condition": "Light Rain",
+        "temperature": 72,
+        "humidity": 91,
+        "wind": {
+          "speed": 9,
+          "direction": "E"
+        }
+      }
+    },
+    {
+      "id": "e87d4dd3-e8ca-46cd-a458-060c1f63e2f9",
+      "status": "closed",
+      "scheduled": "2024-09-21T20:15:00+00:00",
+      "attendance": 62621,
+      "duration": "3:40",
+      "conference_game": true,
+      "neutral_site": false,
+      "home_team": {
+        "id": "772536c7-c3e8-40d1-ac6e-232d719dc052",
+        "name": "Missouri Tigers",
+        "alias": "MIZ",
+        "points": 30
+      },
+      "away_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 27
+      },
+      "venue": {
+        "id": "0ff7c8e7-3b92-4e79-814a-6e4cb2db9578",
+        "name": "Memorial Stadium/Faurot Field",
+        "city": "Columbia",
+        "state": "MO",
+        "country": "USA",
+        "capacity": 62621,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "satellite": "611"
+        }
+      ],
+      "weather": {
+        "condition": "Partly cloudy",
+        "temperature": 76,
+        "humidity": 82,
+        "wind": {
+          "speed": 6,
+          "direction": "S"
+        }
+      }
+    },
+    {
+      "id": "75324212-a0c1-4d1d-9e4f-ac7ed6f784c2",
+      "status": "closed",
+      "scheduled": "2024-10-05T20:15:00+00:00",
+      "attendance": 28934,
+      "duration": "3:26",
+      "conference_game": true,
+      "neutral_site": false,
+      "home_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 40
+      },
+      "away_team": {
+        "id": "19775492-f1eb-4bc5-9e15-078ebd689c0f",
+        "name": "Alabama Crimson Tide",
+        "alias": "BAMA",
+        "points": 35
+      },
+      "venue": {
+        "id": "2f49d92d-c734-4794-bcd5-f830138ae93d",
+        "name": "FirstBank Stadium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA",
+        "capacity": 40550,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "satellite": "611"
+        }
+      ],
+      "weather": {
+        "condition": "Partly cloudy",
+        "temperature": 87,
+        "humidity": 42,
+        "wind": {
+          "speed": 4,
+          "direction": "E"
+        }
+      }
+    },
+    {
+      "id": "6094aeec-104f-4421-9a98-a6153bf4a0bd",
+      "status": "closed",
+      "scheduled": "2024-10-12T23:45:00+00:00",
+      "attendance": 62120,
+      "duration": "3:23",
+      "conference_game": true,
+      "neutral_site": false,
+      "home_team": {
+        "id": "5941ffa3-cdd5-459b-ab61-fef120b929b2",
+        "name": "Kentucky Wildcats",
+        "alias": "KEN",
+        "points": 13
+      },
+      "away_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 20
+      },
+      "venue": {
+        "id": "069f66c7-d648-46a0-b129-01eef3254339",
+        "name": "Kroger Field",
+        "city": "Lexington",
+        "state": "KY",
+        "country": "USA",
+        "capacity": 61000,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "satellite": "611"
+        }
+      ],
+      "weather": {
+        "condition": "Clear",
+        "temperature": 72,
+        "humidity": 53,
+        "wind": {
+          "speed": 9,
+          "direction": "SW"
+        }
+      }
+    },
+    {
+      "id": "f2644fd1-d3f3-4dd4-952c-f1f212ce2b59",
+      "status": "closed",
+      "scheduled": "2024-10-19T23:00:00+00:00",
+      "attendance": 27884,
+      "duration": "2:56",
+      "conference_game": false,
+      "neutral_site": false,
+      "home_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 24
+      },
+      "away_team": {
+        "id": "5b0018d4-52d0-4b53-b90c-2c597298a4bb",
+        "name": "Ball State Cardinals",
+        "alias": "BALL",
+        "points": 14
+      },
+      "venue": {
+        "id": "2f49d92d-c734-4794-bcd5-f830138ae93d",
+        "name": "FirstBank Stadium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA",
+        "capacity": 40550,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network+"
+        }
+      ],
+      "weather": {
+        "condition": "Partly cloudy",
+        "temperature": 72,
+        "humidity": 29,
+        "wind": {
+          "speed": 2,
+          "direction": "E"
+        }
+      }
+    },
+    {
+      "id": "2a731bd6-36aa-4441-b1f8-8232dd46f385",
+      "status": "closed",
+      "scheduled": "2024-10-26T20:15:00+00:00",
+      "attendance": 28934,
+      "duration": "3:16",
+      "conference_game": true,
+      "neutral_site": false,
+      "home_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 24
+      },
+      "away_team": {
+        "id": "ae68bc50-4135-47b5-b2f1-03d0669e54c8",
+        "name": "Texas Longhorns",
+        "alias": "TEX",
+        "points": 27
+      },
+      "venue": {
+        "id": "2f49d92d-c734-4794-bcd5-f830138ae93d",
+        "name": "FirstBank Stadium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA",
+        "capacity": 40550,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "satellite": "611"
+        }
+      ],
+      "weather": {
+        "condition": "Partly Cloudy ",
+        "temperature": 74,
+        "humidity": 55,
+        "wind": {
+          "speed": 9,
+          "direction": "NNE"
+        }
+      }
+    },
+    {
+      "id": "07a3a745-70a5-4a3e-b23a-0084426c69e4",
+      "status": "closed",
+      "scheduled": "2024-11-02T16:45:00+00:00",
+      "attendance": 88043,
+      "duration": "3:21",
+      "conference_game": true,
+      "neutral_site": false,
+      "home_team": {
+        "id": "e5bbd1bd-0d65-4581-8d9c-58b33fd5ce62",
+        "name": "Auburn Tigers",
+        "alias": "AUB",
+        "points": 7
+      },
+      "away_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 17
+      },
+      "venue": {
+        "id": "532e38f6-b491-4810-a120-c84957934879",
+        "name": "Jordan-Hare Stadium",
+        "city": "Auburn",
+        "state": "AL",
+        "country": "USA",
+        "capacity": 87451,
+        "surface": "turf",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "satellite": "611"
+        }
+      ],
+      "weather": {
+        "condition": "Sunny",
+        "temperature": 73,
+        "humidity": 73,
+        "wind": {
+          "speed": 6,
+          "direction": "E"
+        }
+      }
+    },
+    {
+      "id": "8cdf534b-afe7-420e-be61-5590802cd5ea",
+      "status": "closed",
+      "scheduled": "2024-11-09T21:15:00+00:00",
+      "attendance": 28934,
+      "duration": "3:05",
+      "conference_game": true,
+      "neutral_site": false,
+      "home_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 7
+      },
+      "away_team": {
+        "id": "7b1dbcdb-34b2-479e-9b6b-4c7221e7f743",
+        "name": "South Carolina Gamecocks",
+        "alias": "SC",
+        "points": 28
+      },
+      "venue": {
+        "id": "2f49d92d-c734-4794-bcd5-f830138ae93d",
+        "name": "FirstBank Stadium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA",
+        "capacity": 40550,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "satellite": "611"
+        }
+      ],
+      "weather": {
+        "condition": "Partly cloudy",
+        "temperature": 64,
+        "humidity": 87,
+        "wind": {
+          "speed": 2,
+          "direction": "SSW"
+        }
+      }
+    },
+    {
+      "id": "e0643e5c-6b2a-4352-acf8-96123179a020",
+      "status": "closed",
+      "scheduled": "2024-11-24T00:45:00+00:00",
+      "attendance": 102086,
+      "duration": "3:05",
+      "conference_game": true,
+      "neutral_site": false,
+      "home_team": {
+        "id": "ffca4209-dbfa-4597-b25a-ed19bb351037",
+        "name": "LSU Tigers",
+        "alias": "LSU",
+        "points": 24
+      },
+      "away_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 17
+      },
+      "venue": {
+        "id": "7781def9-664a-4377-860f-1667e93e510c",
+        "name": "Tiger Stadium",
+        "city": "Baton Rouge",
+        "state": "LA",
+        "country": "USA",
+        "capacity": 102321,
+        "surface": "turf",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "SEC Network",
+          "satellite": "611"
+        }
+      ],
+      "weather": {
+        "condition": "Clear ",
+        "temperature": 67,
+        "humidity": 65,
+        "wind": {
+          "speed": 2,
+          "direction": "ESE"
+        }
+      }
+    },
+    {
+      "id": "a1f12ab8-e3ad-4bec-884c-eae8d92f8985",
+      "status": "closed",
+      "scheduled": "2024-11-30T17:00:00+00:00",
+      "attendance": 28934,
+      "duration": "3:39",
+      "conference_game": true,
+      "neutral_site": false,
+      "home_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 23
+      },
+      "away_team": {
+        "id": "9ecb9f6b-df4a-4a92-aaa4-5d50a5286bdd",
+        "name": "Tennessee Volunteers",
+        "alias": "TEN",
+        "points": 36
+      },
+      "venue": {
+        "id": "2f49d92d-c734-4794-bcd5-f830138ae93d",
+        "name": "FirstBank Stadium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "USA",
+        "capacity": 40550,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "ABC"
+        }
+      ],
+      "weather": {
+        "condition": "Partly cloudy",
+        "temperature": 38,
+        "humidity": 37,
+        "wind": {
+          "speed": 3,
+          "direction": "S"
+        }
+      }
+    },
+    {
+      "id": "93585f76-a0ff-46ae-9271-9750fbd23caf",
+      "status": "closed",
+      "scheduled": "2024-12-27T20:30:00+00:00",
+      "attendance": 33840,
+      "duration": "4:20",
+      "conference_game": false,
+      "neutral_site": true,
+      "home_team": {
+        "id": "8177772e-e8b5-44c6-8dc2-a745b863ec3b",
+        "name": "Vanderbilt Commodores",
+        "alias": "VAN",
+        "points": 35
+      },
+      "away_team": {
+        "id": "5ff038e1-6e3b-4cbe-90b8-751f783cd7a9",
+        "name": "Georgia Tech Yellow Jackets",
+        "alias": "GT",
+        "points": 27
+      },
+      "venue": {
+        "id": "3125677a-d629-45a2-a5d9-3cab62875770",
+        "name": "Protective Stadium",
+        "city": "Birmingham",
+        "state": "AL",
+        "country": "USA",
+        "capacity": 47100,
+        "surface": "artificial",
+        "roof_type": "outdoor"
+      },
+      "broadcasts": [
+        {
+          "network": "ESPN",
+          "satellite": "206"
+        }
+      ],
+      "weather": {
+        "condition": "Rain, Mist",
+        "temperature": 56,
+        "humidity": 93,
+        "wind": {
+          "speed": 13,
+          "direction": "SSE"
+        }
+      }
+    }
+  ]
+}
