@@ -5,7 +5,7 @@ import PlayerStatsChart from '../components/PlayerStatsChart';
 
 const Home = () => {
   return (
-    <div className="p-6 bg-gray-900 min-h-screen text-white">
+    <div className="p-6 bg-[#F8F9FC] min-h-screen text-[#1D1F6A] font-mono">
       <h1 className="text-2xl font-bold mb-6">Sports Analytics Dashboard</h1>
 
       {/* Stats Section */}

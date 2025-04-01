@@ -10,15 +10,15 @@ const data = [
 
 const PlayerStatsChart = () => {
   return (
-    <div className="bg-gray-800 p-4 rounded-lg shadow-md w-full">
-      <h2 className="text-white text-lg mb-2">Player Statistics Comparison</h2>
+    <div className="bg-white text-[#1D1F6A] p-6 rounded-xl shadow-md w-full font-mono">
+      <h2 className="text-lg font-semibold mb-4">Player Statistics Comparison</h2>
       <ResponsiveContainer width="100%" height={250}>
         <BarChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#555" />
-          <XAxis dataKey="name" stroke="#fff" />
-          <YAxis stroke="#fff" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#E0E7FF" />
+          <XAxis dataKey="name" stroke="#7C3AED" />
+          <YAxis stroke="#7C3AED" />
           <Tooltip />
-          <Bar dataKey="points" fill="#8884d8" />
+          <Bar dataKey="points" fill="#7C3AED" />
         </BarChart>
       </ResponsiveContainer>
     </div>
