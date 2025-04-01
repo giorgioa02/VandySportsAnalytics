@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/MF.jpg';
+import logo from '../assets/FB.jpg';
 
 const VANDY_TEAM_ID = "8177772e-e8b5-44c6-8dc2-a745b863ec3b";
 
