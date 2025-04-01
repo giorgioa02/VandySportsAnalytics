@@ -6,10 +6,7 @@ import Contact from './pages/Contact';
 import Football from './pages/Football';
 import Baseball from './pages/Baseball';
 import Soccer from './pages/Soccer';
-// Import the dashboard component for men's basketball
 import MensBasketballDashboard from './components/MensBasketballDashboard';
-
-// Rohit edit: Import the dashboard component for men's football
 import MensFootballDashboard from './components/MensFootballDashboard';
 
 const App = () => {
@@ -21,39 +18,37 @@ const App = () => {
 
   return (
     <Router>
-      <div className="flex h-screen">
-        {/* Sidebar (Sports List) */}
-        <div className={`${isSidebarOpen ? 'w-64' : 'w-16'} bg-white shadow-md transition-all duration-300 flex flex-col`}>
+      <div className="flex h-screen bg-[#F8F9FC] text-[#1D1F6A] font-mono">
+        {/* Sidebar */}
+        <div className={`${isSidebarOpen ? 'w-64' : 'w-16'} bg-white border-r border-[#E0E7FF] transition-all duration-300 flex flex-col`}>
           <button
             onClick={toggleSidebar}
-            className="p-4 text-gray-800 text-xl focus:outline-none"
+            className="p-4 text-xl text-[#1D1F6A] focus:outline-none"
           >
             ☰
           </button>
           <nav className={`p-4 ${isSidebarOpen ? 'block' : 'hidden'}`}>
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Men's Sports</h3>
-              <ul className="mb-4">
-                <li className="mb-2">
-                  <Link to="/mens-football" className="text-gray-800 hover:underline">Football</Link>
+              <h3 className="text-md font-semibold text-[#1D1F6A] mb-2">Men's Sports</h3>
+              <ul className="mb-4 space-y-2 text-sm">
+                <li>
+                  <Link to="/mens-football" className="hover:text-[#7C3AED]">Football</Link>
                 </li>
-                <li className="mb-2">
-                  {/* Update this link to point to the dedicated mens basketball route */}
-                  <Link to="/mens-basketball" className="text-gray-800 hover:underline">Basketball</Link>
+                <li>
+                  <Link to="/mens-basketball" className="hover:text-[#7C3AED]">Basketball</Link>
                 </li>
-                <li className="mb-2">
-                  <Link to="/baseball" className="text-gray-800 hover:underline">Baseball</Link>
+                <li>
+                  <Link to="/baseball" className="hover:text-[#7C3AED]">Baseball</Link>
                 </li>
               </ul>
 
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Women's Sports</h3>
-              <ul>
-                <li className="mb-2">
-                  <Link to="/soccer" className="text-gray-800 hover:underline">Soccer</Link>
+              <h3 className="text-md font-semibold text-[#1D1F6A] mb-2">Women's Sports</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link to="/soccer" className="hover:text-[#7C3AED]">Soccer</Link>
                 </li>
-                <li className="mb-2">
-                  {/* You can later add a separate route for women's basketball */}
-                  <Link to="/womens-basketball" className="text-gray-800 hover:underline">Basketball</Link>
+                <li>
+                  <Link to="/womens-basketball" className="hover:text-[#7C3AED]">Basketball</Link>
                 </li>
               </ul>
             </div>
@@ -63,27 +58,27 @@ const App = () => {
         {/* Main Content */}
         <div className="flex-1 flex flex-col">
           {/* Top Navigation Bar */}
-          <nav className="bg-white shadow-md p-4 flex justify-between items-center">
-            <div className="text-xl font-bold text-gray-800">Vanderbilt Sports Analytics</div>
-            <div className="flex space-x-4">
-              <Link to="/" className="text-gray-800 hover:underline">Home</Link>
-              <Link to="/about" className="text-gray-800 hover:underline">About</Link>
-              <Link to="/contact" className="text-gray-800 hover:underline">Contact</Link>
+          <nav className="bg-white border-b border-[#E0E7FF] p-4 flex justify-between items-center">
+            <div className="text-xl font-bold text-[#1D1F6A]">Vanderbilt Sports Analytics</div>
+            <div className="flex space-x-6 text-sm text-[#1D1F6A] font-medium">
+              <Link to="/" className="hover:text-[#7C3AED]">Home</Link>
+              <Link to="/about" className="hover:text-[#7C3AED]">About</Link>
+              <Link to="/contact" className="hover:text-[#7C3AED]">Contact Us</Link>
             </div>
           </nav>
 
           {/* Main Content Area */}
-          <main className="flex-1 p-4 bg-gray-100">
+          <main className="flex-1 p-6 overflow-auto">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/mens-football" element={<MensFootballDashboard />} />
-              {/* New route for men's basketball */}
+              <Route path="/football" element={<Football />} />
               <Route path="/mens-basketball" element={<MensBasketballDashboard />} />
               <Route path="/baseball" element={<Baseball />} />
               <Route path="/soccer" element={<Soccer />} />
-              {/* You can add a women's basketball route later */}
+              {/* <Route path="/womens-basketball" element={<WomensBasketball />} /> */}
             </Routes>
           </main>
         </div>
