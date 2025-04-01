@@ -2,13 +2,37 @@ import React, { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setIsSuccess(false);
+
+    try {
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setIsSuccess(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert(data.error || 'Something went wrong.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Failed to send message.');
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -51,11 +75,15 @@ const Contact = () => {
             onChange={handleChange}
             required
           />
+
           <button
             type="submit"
-            className="w-full bg-[#FBBF24] hover:bg-[#f59e0b] text-white font-bold py-3 rounded transition duration-200"
+            disabled={isSubmitting}
+            className={`w-full flex items-center justify-center gap-2 ${
+              isSuccess ? 'bg-green-500' : 'bg-[#FBBF24]'
+            } hover:brightness-110 text-white font-bold py-3 rounded transition duration-200`}
           >
-            SEND A MESSAGE
+            {isSubmitting ? 'Sending...' : isSuccess ? '✓ Message Sent' : 'Send a Message'}
           </button>
         </form>
       </div>

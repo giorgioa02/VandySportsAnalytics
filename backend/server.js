@@ -1,11 +1,55 @@
 const express = require('express');
 const cors = require('cors');
+const nodemailer = require('nodemailer');
+
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT || 3001;
+// Contact Form Endpoint
+app.post('/api/contact', async (req, res) => {
+  const { name, email, message } = req.body;
+
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: 'All fields are required.' });
+  }
+
+  // Set up nodemailer transporter
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'vandysportsanalytics@gmail.com', // sender email
+      pass: 'qhcsqonlcleldlhk',    // Replace with your Gmail App Password (not your real password)
+    },
+  });
+
+  const mailOptions = {
+    from: email,
+    to: [
+      'buket.alkan@vanderbilt.edu',
+      'rohit.sharma.1@vanderbilt.edu',
+      'giorgioa02@gmail.com'
+    ],
+    subject: `New Contact Form Submission from ${name}`,
+    text: `
+      Name: ${name}
+      Email: ${email}
+      Message:
+      ${message}
+    `,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    console.log('Email sent to teammates');
+    res.status(200).json({ message: 'Message sent successfully!' });
+  } catch (error) {
+    console.error('Email sending failed:', error);
+    res.status(500).json({ error: 'Failed to send message. Please try again later.' });
+  }
+});
 
 // Endpoint to serve the Vanderbilt Men's Basketball Team Profile (static)
 app.get('/api/mens-basketball/team-profile', (req, res) => {
