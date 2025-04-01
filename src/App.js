@@ -7,6 +7,7 @@ import Football from './pages/Football';
 import Baseball from './pages/Baseball';
 import Soccer from './pages/Soccer';
 import MensBasketballDashboard from './components/MensBasketballDashboard';
+import MensFootballDashboard from './components/MensFootballDashboard';
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -31,7 +32,7 @@ const App = () => {
               <h3 className="text-md font-semibold text-[#1D1F6A] mb-2">Men's Sports</h3>
               <ul className="mb-4 space-y-2 text-sm">
                 <li>
-                  <Link to="/football" className="hover:text-[#7C3AED]">Football</Link>
+                  <Link to="/mens-football" className="hover:text-[#7C3AED]">Football</Link>
                 </li>
                 <li>
                   <Link to="/mens-basketball" className="hover:text-[#7C3AED]">Basketball</Link>
@@ -72,6 +73,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/mens-football" element={<MensFootballDashboard />} />
               <Route path="/football" element={<Football />} />
               <Route path="/mens-basketball" element={<MensBasketballDashboard />} />
               <Route path="/baseball" element={<Baseball />} />
