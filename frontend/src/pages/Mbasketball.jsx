@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { DateTime } from 'luxon';
 import {
   fetchMensBasketballProfile,
   fetchMensBasketballStats,
-  fetchMensBasketballSchedule
+  fetchMensBasketballSchedule,
+  fetchMensBasketballLastUpdated
 } from '../utils/api';
 import MensBasketballDashboard from '../components/MensBasketballDashboard';
 
@@ -12,6 +14,7 @@ export default function MbballPage() {
   const [profile, setProfile] = useState(null);
   const [stats, setStats] = useState(null);
   const [schedule, setSchedule] = useState(null);
+  const [lastUpdated, setLastUpdated] = useState(null);
 
   useEffect(() => {
     fetchMensBasketballProfile().then(setProfile);
@@ -21,6 +24,12 @@ export default function MbballPage() {
     fetchMensBasketballStats(year, seasonType.toLowerCase()).then(setStats);
     fetchMensBasketballSchedule(year, seasonType.toLowerCase()).then(setSchedule);
   }, [year, seasonType]);
+
+  useEffect(() => {
+    fetchMensBasketballLastUpdated()
+      .then(setLastUpdated)
+      .catch(err => console.error('Failed to fetch last updated time', err));
+  }, []);
 
   const isLoading = !profile?.data || !stats?.data || !schedule?.data;
 
@@ -33,7 +42,7 @@ export default function MbballPage() {
       </h1>
 
       {/* Header Controls Card */}
-      <div className="bg-white p-6 rounded-2xl shadow-md mb-6">
+      <div className="bg-white p-6 rounded-2xl shadow-md mb-6 flex justify-between items-start flex-wrap">
         <div className="flex gap-4">
           <div>
             <label className="block font-bold mb-1">Year</label>
@@ -59,6 +68,16 @@ export default function MbballPage() {
             </select>
           </div>
         </div>
+
+        {/* Last Updated */}
+        {lastUpdated && (
+          <div className="text-sm text-gray-500 text-right whitespace-nowrap mt-4 sm:mt-0">
+            <span className="block font-bold">Last Updated:</span>
+            {DateTime.fromISO(lastUpdated, { zone: 'utc' })
+              .setZone('America/Chicago')
+              .toFormat('MMM dd, yyyy • h:mm a ZZZZ')}
+          </div>
+        )}
       </div>
 
       {/* Team Profile Card */}

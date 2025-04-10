@@ -24,9 +24,9 @@ const statsMapping = {
   free_throws_pct: "Free Throw %"
 };
 
-const VANDY_ID = "72971b77-1d35-40b3-bb63-4c5b29f3d22b";
+const VANDY_ID = "1d9515d0-910a-44d1-b2bb-661390767673";
 
-const MensBasketballDashboard = ({ stats, schedule }) => {
+const WomensBasketballDashboard = ({ stats, schedule }) => {
   const renderTeamStats = () => {
     const teamStats = stats?.own_record?.average;
 
@@ -100,8 +100,13 @@ const MensBasketballDashboard = ({ stats, schedule }) => {
     const awayId = game.away?.id;
     const homePts = game.home_points ?? 0;
     const awayPts = game.away_points ?? 0;
+  
+    console.log('Vandy ID:', VANDY_ID);
+    console.log('Home ID:', homeId);
+    console.log('Away ID:', awayId);
+  
     if (!homeId || !awayId) return '-';
-
+  
     if (homeId === VANDY_ID) return homePts > awayPts ? 'W' : 'L';
     if (awayId === VANDY_ID) return awayPts > homePts ? 'W' : 'L';
     return '-';
@@ -159,4 +164,4 @@ const MensBasketballDashboard = ({ stats, schedule }) => {
   );
 };
 
-export default MensBasketballDashboard;
+export default WomensBasketballDashboard;
