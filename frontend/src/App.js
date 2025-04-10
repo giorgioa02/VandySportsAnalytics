@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import MensBasketball from './pages/MensBasketball';
-import WomensBasketball from './pages/WomensBasketball';
-import MensFootball from './pages/MensFootball';
+import MensBasketball from './pages/Mbasketball';
+import WomensBasketball from './pages/Wbasketball';
+import MensFootball from './pages/Mfootball';
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
