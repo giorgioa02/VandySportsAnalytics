@@ -54,10 +54,11 @@ const FootballDashboard = ({ stats, schedule }) => {
                 <thead>
                     <tr className="bg-[#d2d6dc] text-left">
                         <th className="border border-gray-300">Player</th>
+                        <th className="border border-gray-300">#</th>
                         <th className="border border-gray-300">Position</th>
                         <th className="border border-gray-300">Games Played</th>
                         <th className="border border-gray-300">Tackles</th>
-                        <th className="border border-gray-300">Interceptions</th>
+                        <th className="border border-gray-300">TDs</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,10 +68,21 @@ const FootballDashboard = ({ stats, schedule }) => {
                             className={index % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
                         >
                             <td className="border border-gray-300">{p.name}</td>
+                            <td className="border border-gray-300">{p.jersey}</td>
                             <td className="border border-gray-300">{p.position}</td>
                             <td className="border border-gray-300">{p.games_played ?? '—'}</td>
                             <td className="border border-gray-300">{p.defense?.tackles ?? '—'}</td>
-                            <td className="border border-gray-300">{p.interceptions?.interceptions ?? '—'}</td>
+                            <td className="border border-gray-300">
+                                {
+                                    (p.passing?.touchdowns || 0) +
+                                    (p.rushing?.touchdowns || 0) +
+                                    (p.receiving?.touchdowns || 0) +
+                                    (p.int_returns?.touchdowns || 0) +
+                                    (p.fumbles?.opp_rec_tds || 0) +
+                                    (p.fumbles?.own_rec_tds || 0) +
+                                    (p.fumbles?.ez_rec_tds || 0) || '—'
+                                }
+                            </td>
                         </tr>
                     ))}
                 </tbody>
