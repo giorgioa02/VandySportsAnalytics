@@ -1,22 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import StatsCard from '../components/StatsCard';
 import TeamPerformanceChart from '../components/TeamPerformanceChart';
 import PlayerStatsChart from '../components/PlayerStatsChart';
 
 const Home = () => {
+  const [teamCount, setTeamCount] = useState("—");
+  const [gamesCount, setGamesCount] = useState("—");
+
+  useEffect(() => {
+    // Fetch team count
+    fetch("http://localhost:3001/api/sports/stats/teams-count")
+      .then(res => res.json())
+      .then(data => setTeamCount(data.count))
+      .catch(err => {
+        console.error("Failed to fetch team count:", err);
+        setTeamCount("—");
+      });
+
+    // Fetch games analyzed count
+    fetch("http://localhost:3001/api/sports/stats/games-count")
+      .then(res => res.json())
+      .then(data => setGamesCount(data.count))
+      .catch(err => {
+        console.error("Failed to fetch games count:", err);
+        setGamesCount("—");
+      });
+  }, []);
+
   return (
     <div className="p-6 bg-[#F8F9FC] min-h-screen text-[#1D1F6A] font-mono">
       <h1 className="text-2xl font-bold mb-6">Sports Analytics Dashboard</h1>
 
-      {/* Stats Section */}
+      {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <StatsCard icon="📊" title="Games Analyzed" value="120" />
-        <StatsCard icon="🏃" title="Players Tracked" value="450" />
-        <StatsCard icon="🏆" title="Teams Covered" value="30" />
-        <StatsCard icon="📑" title="Reports Generated" value="85" />
+        <StatsCard icon="🏆" title="Teams Covered" value={teamCount} />
+        <StatsCard icon="📊" title="Games Analyzed" value={gamesCount} />
+        <StatsCard icon="🏃" title="Players Tracked" value="x" />
+        <StatsCard icon="📑" title="Reports Generated" value="x" />
       </div>
 
-      {/* Charts Section */}
+      {/* Charts */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <TeamPerformanceChart />
         <PlayerStatsChart />

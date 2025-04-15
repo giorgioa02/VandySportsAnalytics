@@ -1,24 +1,77 @@
-// backend/routes/sports.js
-
 const express = require("express");
 const router = express.Router();
 const couch = require("../utils/couchdbClient");
 
-// Utility function to format the correct CouchDB doc ID
+// ---------------- UTILS ----------------
+
 const formatDocId = (rawId) => {
   if (rawId === 'team_profile') return 'team_profile';
 
-  const parts = rawId.split('_'); // e.g., ['2024', 'schedule', 'ct']
+  const parts = rawId.split('_');
   if (parts.length === 3) {
     const [year, type, season] = parts;
     if (type === 'schedule') return `schedule_${year}_${season.toUpperCase()}`;
     if (type === 'stats') return `seasonal_stats_${year}_${season.toUpperCase()}`;
   }
 
-  return rawId; // fallback if format doesn't match
+  return rawId;
 };
 
-// Route: GET /api/:sport/:docId
+// ---------------- ROUTES ----------------
+
+// Count CouchDB databases starting with "vandy_"
+router.get("/stats/teams-count", async (req, res) => {
+  try {
+    const dbList = await couch.db.list();
+    const count = dbList.filter(db => db.startsWith("vandy_")).length;
+    res.json({ count });
+  } catch (err) {
+    console.error("[!] Failed to fetch team count:", err.message);
+    res.status(500).json({ error: "Failed to fetch team count" });
+  }
+});
+
+// Count total games played across all vandy databases
+router.get("/stats/games-count", async (req, res) => {
+  try {
+    const dbList = await couch.db.list();
+    const vandyDbs = dbList.filter(db => db.startsWith("vandy_"));
+
+    let totalGames = 0;
+
+    const years = ['2023', '2024'];
+    const types = ['REG', 'CT', 'PST'];
+
+    for (const dbName of vandyDbs) {
+      const db = couch.use(dbName);
+
+      for (const year of years) {
+        for (const type of types) {
+          const docId = `seasonal_stats_${year}_${type}`;
+          try {
+            const doc = await db.get(docId);
+
+            const gamesPlayed =
+              doc?.data?.record?.games_played ??
+              doc?.data?.own_record?.total?.games_played ?? 0;
+
+            totalGames += gamesPlayed;
+          } catch (err) {
+            console.log(`[!] Skipped ${dbName}/${docId}: ${err.reason || err.message}`);
+            continue;
+          }
+        }
+      }
+    }
+
+    res.json({ count: totalGames });
+  } catch (err) {
+    console.error("[!] Failed to fetch games count:", err.message);
+    res.status(500).json({ error: "Failed to fetch games count" });
+  }
+});
+
+// Fetch a specific document by sport + docId
 router.get("/:sport/:docId", async (req, res) => {
   const { sport, docId: rawId } = req.params;
   const dbName = `vandy_${sport}`;
