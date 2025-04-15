@@ -6,6 +6,7 @@ import PlayerStatsChart from '../components/PlayerStatsChart';
 const Home = () => {
   const [teamCount, setTeamCount] = useState("—");
   const [gamesCount, setGamesCount] = useState("—");
+  const [playersCount, setPlayersCount] = useState("—");
 
   useEffect(() => {
     // Fetch team count
@@ -25,6 +26,15 @@ const Home = () => {
         console.error("Failed to fetch games count:", err);
         setGamesCount("—");
       });
+
+    // Fetch players tracked count
+    fetch("http://localhost:3001/api/sports/stats/players-count")
+      .then(res => res.json())
+      .then(data => setPlayersCount(data.count))
+      .catch(err => {
+        console.error("Failed to fetch players count:", err);
+        setPlayersCount("—");
+      });
   }, []);
 
   return (
@@ -35,8 +45,8 @@ const Home = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <StatsCard icon="🏆" title="Teams Covered" value={teamCount} />
         <StatsCard icon="📊" title="Games Analyzed" value={gamesCount} />
-        <StatsCard icon="🏃" title="Players Tracked" value="x" />
-        <StatsCard icon="📑" title="Reports Generated" value="x" />
+        <StatsCard icon="🏃" title="Players Tracked" value={playersCount} />
+        <StatsCard icon="📑" title="Reports Generated" value="—" />
       </div>
 
       {/* Charts */}
