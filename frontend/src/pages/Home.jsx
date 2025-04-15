@@ -7,6 +7,7 @@ const Home = () => {
   const [teamCount, setTeamCount] = useState("—");
   const [gamesCount, setGamesCount] = useState("—");
   const [playersCount, setPlayersCount] = useState("—");
+  const [seasonsCount, setSeasonsCount] = useState("—");
 
   useEffect(() => {
     // Fetch team count
@@ -35,6 +36,15 @@ const Home = () => {
         console.error("Failed to fetch players count:", err);
         setPlayersCount("—");
       });
+
+    // Fetch seasons tracked
+    fetch("http://localhost:3001/api/sports/stats/seasons-count")
+      .then(res => res.json())
+      .then(data => setSeasonsCount(data.count))
+      .catch(err => {
+        console.error("Failed to fetch seasons count:", err);
+        setSeasonsCount("—");
+      });
   }, []);
 
   return (
@@ -43,10 +53,10 @@ const Home = () => {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <StatsCard icon="🏆" title="Teams Covered" value={teamCount} />
+        <StatsCard icon="🏆" title="Teams Tracked" value={teamCount} />
         <StatsCard icon="📊" title="Games Analyzed" value={gamesCount} />
-        <StatsCard icon="🏃" title="Players Tracked" value={playersCount} />
-        <StatsCard icon="📑" title="Reports Generated" value="—" />
+        <StatsCard icon="🏃" title="Players Logged" value={playersCount} />
+        <StatsCard icon="🗓️" title="Seasons Recorded" value={seasonsCount} />
       </div>
 
       {/* Charts */}

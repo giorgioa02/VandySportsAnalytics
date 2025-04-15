@@ -112,6 +112,38 @@ router.get("/stats/players-count", async (req, res) => {
   }
 });
 
+// Count how many distinct REG seasons exist across vandy databases
+router.get("/stats/seasons-count", async (req, res) => {
+  try {
+    const dbList = await couch.db.list();
+    const vandyDbs = dbList.filter(db => db.startsWith("vandy_"));
+
+    const seenYears = new Set();
+
+    for (const dbName of vandyDbs) {
+      const db = couch.use(dbName);
+
+      const years = ['2023', '2024']; // Update this list if more seasons are added
+
+      for (const year of years) {
+        const docId = `seasonal_stats_${year}_REG`;
+        try {
+          const doc = await db.get(docId);
+          if (doc) seenYears.add(year);
+        } catch (err) {
+          // Skip missing docs
+          continue;
+        }
+      }
+    }
+
+    res.json({ count: seenYears.size });
+  } catch (err) {
+    console.error("[!] Failed to fetch seasons count:", err.message);
+    res.status(500).json({ error: "Failed to fetch seasons count" });
+  }
+});
+
 // Must come after all /stats routes
 router.get("/:sport/:docId", async (req, res) => {
   const { sport, docId: rawId } = req.params;
