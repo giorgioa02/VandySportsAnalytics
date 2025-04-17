@@ -1,4 +1,6 @@
 import React from 'react';
+import TeamStatsChart from './page_charts/TeamStatsChart';
+import TopScorersChart from './page_charts/TopScorersChart';
 
 const statsMapping = {
   points_total: "Total Points",
@@ -27,13 +29,20 @@ const statsMapping = {
 const VANDY_ID = "72971b77-1d35-40b3-bb63-4c5b29f3d22b";
 
 const MensBasketballDashboard = ({ stats, schedule }) => {
+  // Prepare data for charts
+  const teamAvg = {
+    points: stats.own_record.average.points,
+    rebounds: stats.own_record.average.rebounds,
+    assists: stats.own_record.average.assists,
+  };
+  const players = stats.players;
+
+  // Team Stats table
   const renderTeamStats = () => {
     const teamStats = stats?.own_record?.average;
-
     if (!teamStats || Object.keys(teamStats).length === 0) {
       return <p className="text-gray-500">No team stats available.</p>;
     }
-
     return (
       <table className="min-w-full border border-gray-300 mb-8" cellPadding="8">
         <thead>
@@ -43,10 +52,10 @@ const MensBasketballDashboard = ({ stats, schedule }) => {
           </tr>
         </thead>
         <tbody>
-          {Object.entries(teamStats).map(([key, value], index) => (
+          {Object.entries(teamStats).map(([key, value], idx) => (
             <tr
               key={key}
-              className={index % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
+              className={idx % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
             >
               <td className="border border-gray-300 capitalize">
                 {statsMapping[key] || key.replace(/_/g, ' ')}
@@ -59,13 +68,12 @@ const MensBasketballDashboard = ({ stats, schedule }) => {
     );
   };
 
+  // Player Stats table
   const renderPlayerStats = () => {
     const playerStats = stats?.players;
-
     if (!playerStats || playerStats.length === 0) {
       return <p className="text-gray-500">No player stats available.</p>;
     }
-
     return (
       <table className="min-w-full border border-gray-300 mb-8" cellPadding="8">
         <thead>
@@ -78,10 +86,10 @@ const MensBasketballDashboard = ({ stats, schedule }) => {
           </tr>
         </thead>
         <tbody>
-          {playerStats.map((p, index) => (
+          {playerStats.map((p, idx) => (
             <tr
               key={p.id}
-              className={index % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
+              className={idx % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
             >
               <td className="border border-gray-300">{p.full_name}</td>
               <td className="border border-gray-300">{p.position}</td>
@@ -95,62 +103,74 @@ const MensBasketballDashboard = ({ stats, schedule }) => {
     );
   };
 
+  // Win/Loss column
   const getResult = (game) => {
-    const homeId = game.home?.id;
-    const awayId = game.away?.id;
-    const homePts = game.home_points ?? 0;
-    const awayPts = game.away_points ?? 0;
-    if (!homeId || !awayId) return '-';
-
-    if (homeId === VANDY_ID) return homePts > awayPts ? 'W' : 'L';
-    if (awayId === VANDY_ID) return awayPts > homePts ? 'W' : 'L';
+    const home = game.home?.id, away = game.away?.id;
+    const hPts = game.home_points ?? 0, aPts = game.away_points ?? 0;
+    if (!home || !away) return '-';
+    if (home === VANDY_ID) return hPts > aPts ? 'W' : 'L';
+    if (away === VANDY_ID) return aPts > hPts ? 'W' : 'L';
     return '-';
   };
 
-  const renderSchedule = () => {
-    return (
-      <table className="w-full border text-sm font-mono border-[#E0E7FF]">
-        <thead className="bg-[#d2d6dc] text-left">
-          <tr>
-            <th className="p-2 border">Date</th>
-            <th className="p-2 border">Home</th>
-            <th className="p-2 border">Away</th>
-            <th className="p-2 border">H. Pts</th>
-            <th className="p-2 border">A. Pts</th>
-            <th className="p-2 border">Result</th>
+  // Schedule table
+  const renderSchedule = () => (
+    <table className="w-full border text-sm font-mono border-[#E0E7FF]">
+      <thead className="bg-[#d2d6dc] text-left">
+        <tr>
+          <th className="p-2 border">Date</th>
+          <th className="p-2 border">Home</th>
+          <th className="p-2 border">Away</th>
+          <th className="p-2 border">H. Pts</th>
+          <th className="p-2 border">A. Pts</th>
+          <th className="p-2 border">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        {schedule.games.map((game, idx) => (
+          <tr
+            key={game.id}
+            className={idx % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
+          >
+            <td className="p-2 border">
+              {new Date(game.scheduled).toLocaleDateString()}
+            </td>
+            <td className="p-2 border">{game.home?.name}</td>
+            <td className="p-2 border">{game.away?.name}</td>
+            <td className="p-2 border">{game.home_points ?? '—'}</td>
+            <td className="p-2 border">{game.away_points ?? '—'}</td>
+            <td className="p-2 border">{getResult(game)}</td>
           </tr>
-        </thead>
-        <tbody>
-          {schedule.games.map((game, index) => (
-            <tr
-              key={game.id}
-              className={index % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
-            >
-              <td className="p-2 border">{new Date(game.scheduled).toLocaleDateString()}</td>
-              <td className="p-2 border">{game.home?.name}</td>
-              <td className="p-2 border">{game.away?.name}</td>
-              <td className="p-2 border">{game.home_points ?? '—'}</td>
-              <td className="p-2 border">{game.away_points ?? '—'}</td>
-              <td className="p-2 border">{getResult(game)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    );
-  };
+        ))}
+      </tbody>
+    </table>
+  );
 
   return (
     <div>
+      {/* Team Averages chart (owns its own title) */}
+      <section className="mb-8">
+        <TeamStatsChart averages={teamAvg} />
+      </section>
+
+      {/* Team Stats table */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">Team Stats</h2>
         {renderTeamStats()}
       </section>
 
+      {/* Top 5 Scorers chart (owns its own title) */}
+      <section className="mb-8">
+        <TopScorersChart players={players} />
+      </section>
+
+      {/* Player Stats table */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">Player Stats</h2>
         {renderPlayerStats()}
       </section>
 
+      {/* Schedule table */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">Schedule</h2>
         {renderSchedule()}
