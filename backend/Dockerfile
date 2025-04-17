@@ -1,3 +1,5 @@
+# AUTHOR: Giorgio Antonacci
+
 # Base image
 FROM node:18
 

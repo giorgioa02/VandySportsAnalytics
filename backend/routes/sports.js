@@ -1,3 +1,5 @@
+// AUTHOR: Giorgio Antonacci
+
 const express = require("express");
 const router = express.Router();
 const couch = require("../utils/couchdbClient");

@@ -1,3 +1,5 @@
+// AUTHOR: Giorgio Antonacci
+
 require('dotenv').config();
 const nano = require('nano');
 
