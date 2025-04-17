@@ -39,7 +39,7 @@ In our setup, we used 3 main deployments:
 
 Ensure **Docker is installed and running**.
 
-Inside the `docker/` folder:
+Inside the `docker/` directory:
 - `producers/` — folders for each sport, each with:
   - `Dockerfile`
   - `*_producer.py`
@@ -76,7 +76,7 @@ DB_NAME_PREFIX = 'vandy_'  # e.g., vandy_mbball
 
 ### ⚙️ Ansible Automation for Producer Deployment
 
-This project includes an **Ansible playbook** that automates the deployment pipeline for our sports data producers (`mbball`, `wbball`, and `mfootball`). These producers fetch live data from the **SportsRadar API**, serialize it into JSON, and push it to **Kafka** topics. Each producer is **Dockerized** and stored in a **private Docker registry**, from which Ansible pulls and runs them.
+This project includes an **Ansible playbook** that automates the deployment pipeline for our sports data producers (`mbball`, `wbball`, and `mfootball`). Producers fetch sports data from the SportsRadar API, serialize it into JSON, and stream it to Kafka topics. Each producer is **Dockerized** and stored in a **private Docker registry**, from which Ansible pulls and runs them.
 
 #### Key Concepts
 - **Ansible** is used for remote orchestration and deployment.
@@ -89,7 +89,7 @@ This project includes an **Ansible playbook** that automates the deployment pipe
 
 ---
 
-### To Replicate
+### To Replicate (Ansible Deployment)
 
 1. **(Optional)** Set up a Docker private registry  
    Store producer container images in a local or hosted Docker registry.
@@ -101,3 +101,25 @@ This project includes an **Ansible playbook** that automates the deployment pipe
 
 4. **Run the playbook**  
     ansible-playbook -i MyInventory run_producer_master.yml
+
+---
+
+### 💻 Running the Web Application (Locally)
+
+To run the full-stack application on your **local machine**:
+
+#### 1. Clone the Repository
+
+#### 2. Backend
+```bash
+cd backend 
+npm install
+npm start   # Starts the backend server at http://localhost:3001
+```
+
+#### 3. Frontend
+```bash
+cd frontend
+npm install
+npm start   # Starts the frontend React app at http://localhost:3000
+```
