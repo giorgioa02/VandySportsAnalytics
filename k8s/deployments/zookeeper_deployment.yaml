@@ -1,0 +1,40 @@
+# AUTHOR: Giorgio Antonacci
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: zookeeper-service
+spec:
+  type: ClusterIP
+  ports:
+    - name: client
+      port: 2181
+      targetPort: 2181
+  selector:
+    app: zookeeper
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: zookeeper
+  name: zookeeper
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zookeeper
+  template:
+    metadata:
+      labels:
+        app: zookeeper
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: vsa-group1-vm2
+      containers:
+        - image: wurstmeister/zookeeper
+          imagePullPolicy: Always
+          name: zookeeper
+          ports:
+            - containerPort: 2181

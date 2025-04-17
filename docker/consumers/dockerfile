@@ -1,0 +1,16 @@
+# AUTHOR: Giorgio Antonacci
+
+# Use a lightweight Python base image
+FROM python:3.10-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy your Python script into the container
+COPY sports_consumer.py .
+
+# Install required Python libraries
+RUN pip install kafka-python couchdb
+
+# Run the consumer script
+CMD ["python", "-u", "sports_consumer.py"]

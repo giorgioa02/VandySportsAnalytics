@@ -1,0 +1,16 @@
+# AUTHOR: Giorgio Antonacci
+
+# Use a lightweight Python base image
+FROM python:3.10-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy your Python script into the container
+COPY mfootball_producer.py .
+
+# Install required Python libraries
+RUN pip install kafka-python requests
+
+# Run the producer script
+CMD ["python", "mfootball_producer.py"]
