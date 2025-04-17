@@ -104,22 +104,59 @@ This project includes an **Ansible playbook** that automates the deployment pipe
 
 ---
 
-### 💻 Running the Web Application (Locally)
+### 💻 Running the Web Application (Dockerized)
 
-To run the full-stack application on your **local machine**:
+The full-stack application (React frontend + Express backend) can be containerized using **Docker**, allowing it to run consistently across environments.
 
-#### 1. Clone the Repository
+---
 
-#### 2. Backend
+#### 🛠️ Setup Notes
+
+- The **frontend** and **backend** are containerized **independently**, using separate `Dockerfile`s in their respective folders.
+- Containers are run with explicit `-p` port mappings.
+- The frontend must be configured to talk to the backend via the **host machine's IP** (e.g., `http://xxx.xxx.xxx.x:3001`) **instead of** `localhost` or `backend`.
+
+
+### 🧱 Docker Build & Run (Manually)
+
+#### 1. Build & Run Backend
+
 ```bash
-cd backend 
-npm install
-npm start   # Starts the backend server at http://localhost:3001
+cd backend
+sudo docker build -t vsa-backend .
+sudo docker run -d -p 3001:3001 --name vsa-backend vsa-backend
 ```
 
-#### 3. Frontend
+---
+
+#### 2. Update Frontend Fetch URLs
+
+In your React frontend code, replace all `fetch()` calls:
+
+```js
+//  Before
+fetch("http://localhost:3001/api/...")
+fetch("http://backend:3001/api/...")
+
+// After (use the IP address of your VM)
+fetch("http://xxx.xxx.xxx.x:3001/api/...")
+```
+
+---
+
+#### 3. Build & Run Frontend
+
 ```bash
 cd frontend
-npm install
-npm start   # Starts the frontend React app at http://localhost:3000
+sudo docker build -t vsa-frontend .
+sudo docker run -d -p 80:80 --name vsa-frontend vsa-frontend
 ```
+
+---
+
+### 🌐 Access the App
+
+Once both containers are running:
+
+- **Frontend:** `http://xxx.xxx.xxx.x/`
+- **Backend API:** `http://xxx.xxx.xxx.x:3001/api/...`
