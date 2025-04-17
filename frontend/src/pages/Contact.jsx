@@ -14,7 +14,7 @@ const Contact = () => {
     setIsSuccess(false);
 
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const response = await fetch('http://backend:3001/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

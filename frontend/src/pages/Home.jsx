@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     // Fetch team count
-    fetch("http://localhost:3001/api/sports/stats/teams-count")
+    fetch("http://backend:3001/api/sports/stats/teams-count")
       .then(res => res.json())
       .then(data => setTeamCount(data.count))
       .catch(err => {
@@ -20,7 +20,7 @@ const Home = () => {
       });
 
     // Fetch games analyzed count
-    fetch("http://localhost:3001/api/sports/stats/games-count")
+    fetch("http://backend:3001/api/sports/stats/games-count")
       .then(res => res.json())
       .then(data => setGamesCount(data.count))
       .catch(err => {
@@ -29,7 +29,7 @@ const Home = () => {
       });
 
     // Fetch players tracked count
-    fetch("http://localhost:3001/api/sports/stats/players-count")
+    fetch("http://backend:3001/api/sports/stats/players-count")
       .then(res => res.json())
       .then(data => setPlayersCount(data.count))
       .catch(err => {
@@ -38,7 +38,7 @@ const Home = () => {
       });
 
     // Fetch seasons tracked
-    fetch("http://localhost:3001/api/sports/stats/seasons-count")
+    fetch("http://backend:3001/api/sports/stats/seasons-count")
       .then(res => res.json())
       .then(data => setSeasonsCount(data.count))
       .catch(err => {
