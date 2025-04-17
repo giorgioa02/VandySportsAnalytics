@@ -1,4 +1,4 @@
-# AUTHOR: Giorgio Antonacci# 
+# AUTHOR: Giorgio Antonacci
 
 FROM node:18 AS build
 WORKDIR /app

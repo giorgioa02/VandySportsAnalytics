@@ -1,3 +1,5 @@
+// AUTHOR: Giorgio Antonacci
+
 // Men's Basketball
 export const fetchMensBasketballProfile = () =>
     fetch('http://192.168.64.6:3001/api/sports/mbball/team_profile').then(res => res.json());
