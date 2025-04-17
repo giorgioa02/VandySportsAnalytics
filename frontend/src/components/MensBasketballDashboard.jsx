@@ -1,4 +1,6 @@
 import React from 'react';
+import TeamStatsChart from './page_charts/TeamStatsChart';
+import TopScorersChart from './page_charts/TopScorersChart';
 
 const statsMapping = {
   points_total: "Total Points",
@@ -27,9 +29,16 @@ const statsMapping = {
 const VANDY_ID = "72971b77-1d35-40b3-bb63-4c5b29f3d22b";
 
 const MensBasketballDashboard = ({ stats, schedule }) => {
+  const teamAvg = {
+    points: stats.own_record.average.points,
+    rebounds: stats.own_record.average.rebounds,
+    assists: stats.own_record.average.assists,
+  };
+
+  const players = stats?.players;
+
   const renderTeamStats = () => {
     const teamStats = stats?.own_record?.average;
-
     if (!teamStats || Object.keys(teamStats).length === 0) {
       return <p className="text-gray-500">No team stats available.</p>;
     }
@@ -60,9 +69,7 @@ const MensBasketballDashboard = ({ stats, schedule }) => {
   };
 
   const renderPlayerStats = () => {
-    const playerStats = stats?.players;
-
-    if (!playerStats || playerStats.length === 0) {
+    if (!players || players.length === 0) {
       return <p className="text-gray-500">No player stats available.</p>;
     }
 
@@ -78,7 +85,7 @@ const MensBasketballDashboard = ({ stats, schedule }) => {
           </tr>
         </thead>
         <tbody>
-          {playerStats.map((p, index) => (
+          {players.map((p, index) => (
             <tr
               key={p.id}
               className={index % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
@@ -141,16 +148,29 @@ const MensBasketballDashboard = ({ stats, schedule }) => {
 
   return (
     <div>
+      {/* Team Averages Chart */}
+      <section className="mb-8">
+        <TeamStatsChart averages={teamAvg} />
+      </section>
+
+      {/* Team Stats Table */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">Team Stats</h2>
         {renderTeamStats()}
       </section>
 
+      {/* Top Scorers Chart */}
+      <section className="mb-8">
+        <TopScorersChart players={players} />
+      </section>
+
+      {/* Player Stats Table */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">Player Stats</h2>
         {renderPlayerStats()}
       </section>
 
+      {/* Schedule Table */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">Schedule</h2>
         {renderSchedule()}

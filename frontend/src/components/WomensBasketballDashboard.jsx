@@ -1,4 +1,6 @@
-import React from 'react';
+import React from 'react'
+import TeamStatsChart from './page_charts/TeamStatsChart'
+import TopScorersChart from './page_charts/TopScorersChart'
 
 const statsMapping = {
   points_total: "Total Points",
@@ -22,18 +24,23 @@ const statsMapping = {
   free_throws_att: "Free Throw Attempts",
   free_throws_made: "Free Throws Made",
   free_throws_pct: "Free Throw %"
-};
+}
 
-const VANDY_ID = "1d9515d0-910a-44d1-b2bb-661390767673";
+const VANDY_ID = "1d9515d0-910a-44d1-b2bb-661390767673"
 
 const WomensBasketballDashboard = ({ stats, schedule }) => {
+  const teamAvg = {
+    points: stats.own_record.average.points,
+    rebounds: stats.own_record.average.rebounds,
+    assists: stats.own_record.average.assists,
+  }
+  const players = stats.players
+
   const renderTeamStats = () => {
-    const teamStats = stats?.own_record?.average;
-
+    const teamStats = stats?.own_record?.average
     if (!teamStats || Object.keys(teamStats).length === 0) {
-      return <p className="text-gray-500">No team stats available.</p>;
+      return <p className="text-gray-500">No team stats available.</p>
     }
-
     return (
       <table className="min-w-full border border-gray-300 mb-8" cellPadding="8">
         <thead>
@@ -43,11 +50,8 @@ const WomensBasketballDashboard = ({ stats, schedule }) => {
           </tr>
         </thead>
         <tbody>
-          {Object.entries(teamStats).map(([key, value], index) => (
-            <tr
-              key={key}
-              className={index % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
-            >
+          {Object.entries(teamStats).map(([key, value], idx) => (
+            <tr key={key} className={idx % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}>
               <td className="border border-gray-300 capitalize">
                 {statsMapping[key] || key.replace(/_/g, ' ')}
               </td>
@@ -56,16 +60,14 @@ const WomensBasketballDashboard = ({ stats, schedule }) => {
           ))}
         </tbody>
       </table>
-    );
-  };
+    )
+  }
 
   const renderPlayerStats = () => {
-    const playerStats = stats?.players;
-
+    const playerStats = stats?.players
     if (!playerStats || playerStats.length === 0) {
-      return <p className="text-gray-500">No player stats available.</p>;
+      return <p className="text-gray-500">No player stats available.</p>
     }
-
     return (
       <table className="min-w-full border border-gray-300 mb-8" cellPadding="8">
         <thead>
@@ -78,11 +80,8 @@ const WomensBasketballDashboard = ({ stats, schedule }) => {
           </tr>
         </thead>
         <tbody>
-          {playerStats.map((p, index) => (
-            <tr
-              key={p.id}
-              className={index % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
-            >
+          {playerStats.map((p, idx) => (
+            <tr key={p.id} className={idx % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}>
               <td className="border border-gray-300">{p.full_name}</td>
               <td className="border border-gray-300">{p.position}</td>
               <td className="border border-gray-300">{p.total?.points ?? '—'}</td>
@@ -92,76 +91,76 @@ const WomensBasketballDashboard = ({ stats, schedule }) => {
           ))}
         </tbody>
       </table>
-    );
-  };
+    )
+  }
 
   const getResult = (game) => {
-    const homeId = game.home?.id;
-    const awayId = game.away?.id;
-    const homePts = game.home_points ?? 0;
-    const awayPts = game.away_points ?? 0;
-  
-    console.log('Vandy ID:', VANDY_ID);
-    console.log('Home ID:', homeId);
-    console.log('Away ID:', awayId);
-  
-    if (!homeId || !awayId) return '-';
-  
-    if (homeId === VANDY_ID) return homePts > awayPts ? 'W' : 'L';
-    if (awayId === VANDY_ID) return awayPts > homePts ? 'W' : 'L';
-    return '-';
-  };
+    const home = game.home?.id, away = game.away?.id
+    const hPts = game.home_points ?? 0, aPts = game.away_points ?? 0
+    if (!home || !away) return '-'
+    if (home === VANDY_ID) return hPts > aPts ? 'W' : 'L'
+    if (away === VANDY_ID) return aPts > hPts ? 'W' : 'L'
+    return '-'
+  }
 
-  const renderSchedule = () => {
-    return (
-      <table className="w-full border text-sm font-mono border-[#E0E7FF]">
-        <thead className="bg-[#d2d6dc] text-left">
-          <tr>
-            <th className="p-2 border">Date</th>
-            <th className="p-2 border">Home</th>
-            <th className="p-2 border">Away</th>
-            <th className="p-2 border">H. Pts</th>
-            <th className="p-2 border">A. Pts</th>
-            <th className="p-2 border">Result</th>
+  const renderSchedule = () => (
+    <table className="w-full border text-sm font-mono border-[#E0E7FF]">
+      <thead className="bg-[#d2d6dc] text-left">
+        <tr>
+          <th className="p-2 border">Date</th>
+          <th className="p-2 border">Home</th>
+          <th className="p-2 border">Away</th>
+          <th className="p-2 border">H. Pts</th>
+          <th className="p-2 border">A. Pts</th>
+          <th className="p-2 border">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        {schedule.games.map((game, idx) => (
+          <tr key={game.id} className={idx % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}>
+            <td className="p-2 border">{new Date(game.scheduled).toLocaleDateString()}</td>
+            <td className="p-2 border">{game.home?.name}</td>
+            <td className="p-2 border">{game.away?.name}</td>
+            <td className="p-2 border">{game.home_points ?? '—'}</td>
+            <td className="p-2 border">{game.away_points ?? '—'}</td>
+            <td className="p-2 border">{getResult(game)}</td>
           </tr>
-        </thead>
-        <tbody>
-          {schedule.games.map((game, index) => (
-            <tr
-              key={game.id}
-              className={index % 2 === 0 ? 'bg-white' : 'bg-[#f0f4ff]'}
-            >
-              <td className="p-2 border">{new Date(game.scheduled).toLocaleDateString()}</td>
-              <td className="p-2 border">{game.home?.name}</td>
-              <td className="p-2 border">{game.away?.name}</td>
-              <td className="p-2 border">{game.home_points ?? '—'}</td>
-              <td className="p-2 border">{game.away_points ?? '—'}</td>
-              <td className="p-2 border">{getResult(game)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    );
-  };
+        ))}
+      </tbody>
+    </table>
+  )
 
   return (
     <div>
+      {/* 1) Team Averages chart */}
+      <section className="mb-8">
+        <TeamStatsChart averages={teamAvg} />
+      </section>
+
+      {/* 2) Team Stats table */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">Team Stats</h2>
         {renderTeamStats()}
       </section>
 
+      {/* 3) Top Scorers chart */}
+      <section className="mb-8">
+        <TopScorersChart players={players} />
+      </section>
+
+      {/* 4) Player Stats table */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">Player Stats</h2>
         {renderPlayerStats()}
       </section>
 
+      {/* 5) Schedule table */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-2">Schedule</h2>
         {renderSchedule()}
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default WomensBasketballDashboard;
+export default WomensBasketballDashboard
