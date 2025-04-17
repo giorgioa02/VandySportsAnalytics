@@ -1,0 +1,34 @@
+# AUTHOR: Giorgio Antonacci
+
+[all]
+# Define all VM hosts with external IPs, SSH user, and private key
+vm1 ansible_host=<VM1_PUBLIC_IP> ansible_user=cc ansible_ssh_private_key_file=<PATH_TO_PRIVATE_KEY>
+vm2 ansible_host=<VM2_PUBLIC_IP> ansible_user=cc ansible_ssh_private_key_file=<PATH_TO_PRIVATE_KEY>
+vm3 ansible_host=<VM3_PUBLIC_IP> ansible_user=cc ansible_ssh_private_key_file=<PATH_TO_PRIVATE_KEY>
+vm4 ansible_host=<VM4_PUBLIC_IP> ansible_user=cc ansible_ssh_private_key_file=<PATH_TO_PRIVATE_KEY>
+
+[master]
+# Define the master node
+vm1
+
+[workers]
+# Define worker nodes
+vm2
+vm3
+vm4
+
+[database]
+# Define the database (CouchDB) node
+vm4
+
+# ------------------------
+# Global Variables
+# ------------------------
+[all:vars]
+# Internal (private) IP of the master node VM (VM1)
+MASTER_PRIVATE_IP=<VM1_INTERNAL_IP>
+
+# Uncomment and set if deploying Kafka/Zookeeper
+# BROKER_INTERNAL_IP=<VM2_INTERNAL_IP>      # Kafka broker internal IP
+# ZOOKEEPER_INTERNAL_IP=<VM3_INTERNAL_IP>   # Zookeeper internal IP
+
